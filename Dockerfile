@@ -1,5 +1,12 @@
 # Start image
-FROM python:3
+FROM --platform=${TARGETPLATFORM:-linux/amd64} python:3
+
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+RUN printf "I am running on ${BUILDPLATFORM:-linux/amd64}, building for ${TARGETPLATFORM:-linux/amd64}\n$(uname -a)\n"
+
+# Maintainer
+LABEL maintainer="derogab"
 
 # Install app dependencies
 RUN apt-get clean && apt-get update && \
