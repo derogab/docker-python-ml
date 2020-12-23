@@ -22,5 +22,4 @@ RUN apt-get clean && apt-get update && \
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install urllib3 h5py pandas sklearn scipy numpy
 
-RUN wget https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow_cpu-2.4.0-cp38-cp38-win_amd64.whl && \
-    python3 -m pip install tensorflow_cpu-2.4.0-cp38-cp38-win_amd64.whl
+RUN python3 -m pip install tensorflow
