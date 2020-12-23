@@ -24,5 +24,9 @@ RUN apt-get clean && apt-get update && \
 
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install urllib3 h5py pandas sklearn scipy numpy
-RUN wget https://storage.googleapis.com/tensorflow-nightly/tensorflow-1.10.0-cp34-none-linux_armv7l.whl && \
-    python3 -m pip install tensorflow-1.10.0-cp34-none-linux_armv7l.whl
+RUN git clone https://github.com/tensorflow/tensorflow.git && \
+    cd tensorflow && \
+    tensorflow/tools/ci_build/ci_build.sh PI-PYTHON3 \
+        tensorflow/tools/ci_build/pi/build_raspberry_pi.sh && \
+    ls && \
+    pip install tensorflow-latest-cp35-none-linux_armv7l.whl
