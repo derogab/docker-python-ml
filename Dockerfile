@@ -1,5 +1,5 @@
 # Start image
-FROM ubuntu:latest
+FROM tensorflow/tensorflow:latest
 
 # Install app dependencies
 RUN apt-get clean && apt-get update && \
@@ -21,5 +21,3 @@ RUN apt-get clean && apt-get update && \
 
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install urllib3 h5py pandas sklearn scipy numpy
-
-RUN python3 -m pip install tensorflow
