@@ -1,5 +1,5 @@
 # Start image
-FROM --platform=${TARGETPLATFORM:-linux/amd64} python:3
+FROM --platform=${TARGETPLATFORM:-linux/amd64} tensorflow/tensorflow:latest
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
