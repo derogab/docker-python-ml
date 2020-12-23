@@ -1,5 +1,5 @@
 # Start image
-FROM python:3
+FROM debian:latest
 
 # Copy downloaded architecture emulation static binary
 COPY qemu-arm-static /usr/bin/

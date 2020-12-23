@@ -1,5 +1,5 @@
 # Start image
-FROM python:3
+FROM debian:latest
 
 # Install app dependencies
 RUN apt-get clean && apt-get update && \
