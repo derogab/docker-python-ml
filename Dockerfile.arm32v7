@@ -21,7 +21,7 @@ RUN apk upgrade && \
             openblas-dev \
             lapack-dev 
 
-RUN python3 -m pip install --upgrade pip && \
+RUN python3 -m pip install --upgrade pip setuptools wheel && \
     python3 -m pip install urllib3 h5py pandas sklearn scipy numpy
 RUN git clone https://github.com/tensorflow/tensorflow.git && \
     cd tensorflow && \
