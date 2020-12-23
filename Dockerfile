@@ -1,5 +1,5 @@
 # Start image
-FROM debian:latest
+FROM ubuntu:latest
 
 # Install app dependencies
 RUN apt-get clean && apt-get update && \
